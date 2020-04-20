@@ -1,0 +1,121 @@
+2020-04-20 21:58:15.350 +02:00 [DBG] Hosting starting
+2020-04-20 21:58:15.620 +02:00 [DBG] An 'IServiceProvider' was created for internal use by Entity Framework.
+2020-04-20 21:58:16.660 +02:00 [INF] Entity Framework Core 3.1.3 initialized 'DataContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2020-04-20 21:58:16.745 +02:00 [DBG] 'DataContext' generated a temporary value for the 'ActorID' property of new 'Actor' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-04-20 21:58:16.855 +02:00 [DBG] Context 'DataContext' started tracking 'Actor' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-04-20 21:58:16.867 +02:00 [DBG] SaveChanges starting for 'DataContext'.
+2020-04-20 21:58:16.873 +02:00 [DBG] DetectChanges starting for 'DataContext'.
+2020-04-20 21:58:16.888 +02:00 [DBG] DetectChanges completed for 'DataContext'.
+2020-04-20 21:58:17.105 +02:00 [DBG] Opening connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.362 +02:00 [DBG] Opened connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.365 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2020-04-20 21:58:17.384 +02:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2020-04-20 21:58:17.480 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-04-20 21:58:17.494 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (5ms).
+2020-04-20 21:58:17.536 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Actor] ([ActorName])
+VALUES (@p0);
+SELECT [ActorID]
+FROM [Actor]
+WHERE @@ROWCOUNT = 1 AND [ActorID] = scope_identity();
+2020-04-20 21:58:17.639 +02:00 [INF] Executed DbCommand (119ms) [Parameters=[@p0='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Actor] ([ActorName])
+VALUES (@p0);
+SELECT [ActorID]
+FROM [Actor]
+WHERE @@ROWCOUNT = 1 AND [ActorID] = scope_identity();
+2020-04-20 21:58:17.682 +02:00 [DBG] Foreign key property 'Actor.ActorID' detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2020-04-20 21:58:17.700 +02:00 [DBG] A data reader was disposed.
+2020-04-20 21:58:17.705 +02:00 [DBG] Committing transaction.
+2020-04-20 21:58:17.713 +02:00 [DBG] Committing transaction.
+2020-04-20 21:58:17.716 +02:00 [DBG] Closing connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.726 +02:00 [DBG] Closed connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.728 +02:00 [DBG] Disposing transaction.
+2020-04-20 21:58:17.748 +02:00 [DBG] An 'Actor' entity tracked by 'DataContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-04-20 21:58:17.750 +02:00 [DBG] SaveChanges completed for 'DataContext' with 1 entities written to the database.
+2020-04-20 21:58:17.753 +02:00 [DBG] 'DataContext' generated a temporary value for the 'MovieId' property of new 'Movie' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-04-20 21:58:17.768 +02:00 [DBG] Context 'DataContext' started tracking 'Movie' entity. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-04-20 21:58:17.770 +02:00 [DBG] SaveChanges starting for 'DataContext'.
+2020-04-20 21:58:17.770 +02:00 [DBG] DetectChanges starting for 'DataContext'.
+2020-04-20 21:58:17.779 +02:00 [DBG] DetectChanges completed for 'DataContext'.
+2020-04-20 21:58:17.779 +02:00 [DBG] Opening connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.781 +02:00 [DBG] Opened connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.781 +02:00 [DBG] Beginning transaction with isolation level 'Unspecified'.
+2020-04-20 21:58:17.782 +02:00 [DBG] Began transaction with isolation level 'ReadCommitted'.
+2020-04-20 21:58:17.784 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-04-20 21:58:17.784 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-04-20 21:58:17.786 +02:00 [DBG] Executing DbCommand [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Movie] ([ActorId], [MovieName])
+VALUES (@p0, @p1);
+SELECT [MovieId]
+FROM [Movie]
+WHERE @@ROWCOUNT = 1 AND [MovieId] = scope_identity();
+2020-04-20 21:58:17.790 +02:00 [INF] Executed DbCommand (4ms) [Parameters=[@p0='?' (DbType = Int32), @p1='?' (Size = 4000)], CommandType='"Text"', CommandTimeout='30']
+SET NOCOUNT ON;
+INSERT INTO [Movie] ([ActorId], [MovieName])
+VALUES (@p0, @p1);
+SELECT [MovieId]
+FROM [Movie]
+WHERE @@ROWCOUNT = 1 AND [MovieId] = scope_identity();
+2020-04-20 21:58:17.792 +02:00 [DBG] Foreign key property 'Movie.MovieId' detected as changed. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see property values.
+2020-04-20 21:58:17.795 +02:00 [DBG] A data reader was disposed.
+2020-04-20 21:58:17.795 +02:00 [DBG] Committing transaction.
+2020-04-20 21:58:17.800 +02:00 [DBG] Committing transaction.
+2020-04-20 21:58:17.800 +02:00 [DBG] Closing connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.800 +02:00 [DBG] Closed connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:17.800 +02:00 [DBG] Disposing transaction.
+2020-04-20 21:58:17.801 +02:00 [DBG] An 'Movie' entity tracked by 'DataContext' changed from '"Added"' to '"Unchanged"'. Consider using 'DbContextOptionsBuilder.EnableSensitiveDataLogging' to see key values.
+2020-04-20 21:58:17.801 +02:00 [DBG] SaveChanges completed for 'DataContext' with 1 entities written to the database.
+2020-04-20 21:58:18.169 +02:00 [DBG] queryContext => new QueryingEnumerable<<>f__AnonymousType0<string, string>>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, <>f__AnonymousType0<string, string>>, 
+    GenericHost.DataContext, 
+    DiagnosticsLogger<Query>
+)
+2020-04-20 21:58:18.216 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-04-20 21:58:18.216 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-04-20 21:58:18.217 +02:00 [DBG] Opening connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.217 +02:00 [DBG] Opened connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.217 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorName], [m].[MovieName]
+FROM [Actor] AS [a]
+INNER JOIN [Movie] AS [m] ON [a].[ActorID] = [m].[ActorId]
+2020-04-20 21:58:18.222 +02:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT [a].[ActorName], [m].[MovieName]
+FROM [Actor] AS [a]
+INNER JOIN [Movie] AS [m] ON [a].[ActorID] = [m].[ActorId]
+2020-04-20 21:58:18.230 +02:00 [DBG] A data reader was disposed.
+2020-04-20 21:58:18.230 +02:00 [DBG] Closing connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.230 +02:00 [DBG] Closed connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.295 +02:00 [DBG] queryContext => new QueryingEnumerable<Actor>(
+    (RelationalQueryContext)queryContext, 
+    RelationalCommandCache, 
+    null, 
+    null, 
+    Func<QueryContext, DbDataReader, ResultContext, int[], ResultCoordinator, Actor>, 
+    GenericHost.DataContext, 
+    DiagnosticsLogger<Query>
+)
+    .SingleOrDefault()
+2020-04-20 21:58:18.298 +02:00 [DBG] Creating DbCommand for 'ExecuteReader'.
+2020-04-20 21:58:18.298 +02:00 [DBG] Created DbCommand for 'ExecuteReader' (0ms).
+2020-04-20 21:58:18.298 +02:00 [DBG] Opening connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.298 +02:00 [DBG] Opened connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.299 +02:00 [DBG] Executing DbCommand [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[ActorID], [a].[ActorName]
+FROM [Actor] AS [a]
+WHERE [a].[ActorName] = N'Jsonww'
+2020-04-20 21:58:18.301 +02:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [a].[ActorID], [a].[ActorName]
+FROM [Actor] AS [a]
+WHERE [a].[ActorName] = N'Jsonww'
+2020-04-20 21:58:18.301 +02:00 [DBG] A data reader was disposed.
+2020-04-20 21:58:18.301 +02:00 [DBG] Closing connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:18.301 +02:00 [DBG] Closed connection to database 'GenericHost' on server 'localhost\SQLEXPRESS'.
+2020-04-20 21:58:22.300 +02:00 [INF] Application is shutting down...
