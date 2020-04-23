@@ -54,9 +54,9 @@ namespace GenericHost
             {
                 Console.WriteLine($"{actorOldName} does not exists in database");
             }
-        }
+        }  
 
-        public void RemoveData(DataContext context)
+        public void RemoveData()
         {
             var m = context.Set<Movie>();
             context.AttachRange(m);
